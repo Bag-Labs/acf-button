@@ -3,7 +3,7 @@ Contributors: circlecube, brownbagmarketing
 Tags: acf, button, link, custom, custom post type, page, post, posts, pages, url
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 GitHub Plugin URI: https://github.com/Bag-Labs/acf-button
@@ -41,6 +41,9 @@ This ACF field type is compatible with:
 4. Please refer to the description for more info regarding the field type settings
 
 == Changelog ==
+
+= 1.7.1 =
+* Fix bug that when loading a content link to a button in the admin the value didn't select and display the saved value.
 
 = 1.7.0 =
 * Add anchor value.

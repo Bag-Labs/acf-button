@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Button
 Plugin URI: https://circlecube.com/does-wordpress/
 Description: Adds a simple yet featured button field for ACF.
-Version: 1.7.0
+Version: 1.7.1
 Author: Evan Mullins
 Author URI: https://circlecube.com/
 License: GPLv2 or later
@@ -37,7 +37,7 @@ class acf_plugin_button {
 		
 		// vars
 		$this->settings = array(
-			'version'	=> '1.7.0',
+			'version'	=> '1.7.1',
 			'url'		=> plugin_dir_url( __FILE__ ),
 			'path'		=> plugin_dir_path( __FILE__ )
 		);
