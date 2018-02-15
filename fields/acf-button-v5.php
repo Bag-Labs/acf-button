@@ -198,27 +198,27 @@ if ( ! class_exists( 'acf_field_button' ) ) :
 				'post'   => __( 'Link to WordPress Content', 'acf-button' ),
 			);
 
-			$args = array(
-				'public'   => true,
-				'_builtin' => false,
-			);
+			// $args = array(
+			// 	'public'   => true,
+			// 	'_builtin' => false,
+			// );
 
-			$ignore = array(
-				'page',
-				'post',
-				'attachment',
-				'acf-field',
-				'acf-field-group',
-			);
+			// $ignore = array(
+			// 	'page',
+			// 	'post',
+			// 	'attachment',
+			// 	'acf-field',
+			// 	'acf-field-group',
+			// );
 
-			$cpts = get_post_types( $args, 'objects' );
-			if ( $cpts ) {
-				foreach ( $cpts as $cpt ) {
-					$name                  = $cpt->name;
-					$label                 = $cpt->label;
-					$type_choices[ $name ] = $label;
-				}
-			}
+			// $cpts = get_post_types( $args, 'objects' );
+			// if ( $cpts ) {
+			// 	foreach ( $cpts as $cpt ) {
+			// 		$name                  = $cpt->name;
+			// 		$label                 = $cpt->label;
+			// 		$type_choices[ $name ] = $label;
+			// 	}
+			// }
 
 			acf_render_field_setting(
 				$field, array(
@@ -374,7 +374,7 @@ if ( 'type' === $field['allow_advanced'] ||
 						'acf-field-group',
 					);
 					$cpts   = get_post_types( $args, 'objects' );
-				if ( $cpts ) {
+
 					?>
 					<select 
 						name="<?php echo esc_attr( $field['name'] ); ?>[type]"
@@ -395,7 +395,6 @@ if ( 'type' === $field['allow_advanced'] ||
 						?>
 						>Link to WordPress Content</option>
 						</select>
-					<?php } ?>
 				</div>
 			</div>
 <?php
@@ -428,7 +427,7 @@ if ( 'type' === $field['allow_advanced'] ||
 				</div>
 				<div class="acf-input">
 					<?php
-					$selected = esc_attr( $field['value']['post'] );
+					$selected = $field['value']['post'];
 
 					// query arguments.
 					$args = array(
@@ -462,7 +461,7 @@ if ( 'type' === $field['allow_advanced'] ||
 						?>
 						<option value="<?php echo esc_attr( $this_id ); ?>" 
 							<?php
-							if ( $field['value']['post'] === $this_id ) {
+							if ( intval($selected) === intval($this_id) ) {
 								echo 'selected';
 							}
 							?>
