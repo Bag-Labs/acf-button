@@ -43,7 +43,7 @@ This ACF field type is compatible with:
 == Changelog ==
 
 = 1.7.2 =
-*Fix bug when anchor is empty it adds a hashtag to the end of the url.
+* Fix bug when anchor is empty it adds a hashtag to the end of the url.
 
 = 1.7.1 =
 * Fix bug that when loading a content link to a button in the admin the value didn't select and display the saved value.
