@@ -864,7 +864,7 @@ if ( 'rel' === $field['allow_advanced'] ||
 			}
 
 			// append anchor.
-			if ( isset( $value['anchor'] ) ) {
+			if ( isset( $value['anchor'] ) && $value['anchor'] !== '' ) {
 				$url .= '#' . $value['anchor'];
 			}
 
