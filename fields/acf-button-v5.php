@@ -825,11 +825,10 @@ if ( 'rel' === $field['allow_advanced'] ||
 			$rel    = '';
 			$class  = 'button';
 			// get url - if url exists use it, if not use the page id to get permalink.
-			if ( 'custom' === $value['type'] ) {
+			if ( 'custom' === $field['default_type'] ) {
 				$url = $value['url'];
 			} else {
-				$type = $value['type'];
-				$url  = get_permalink( $value[ $type ] );
+				$url  = get_permalink( $field['value']['post'] );
 			}
 
 			// get target.
